@@ -4,9 +4,7 @@
     stages{
         stage('Build'){
             steps {
-                sh '''#!/bin/bash
-                mvn clean package
-                '''
+                sh '/Users/carlo/Documents/apache-maven-3.6.1/bin/mvn clean package'
             }
             post {
                 success {
