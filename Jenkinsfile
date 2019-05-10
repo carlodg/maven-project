@@ -1,10 +1,12 @@
  pipeline {
     agent any
-    
+
     stages{
         stage('Build'){
             steps {
-                bash 'mvn clean package'
+                sh '''#!/bin/bash
+                mvn clean package
+                '''
             }
             post {
                 success {
